@@ -1,7 +1,6 @@
 // Preload script - connects the frontend to Electron's capabilities
 const { contextBridge, ipcRenderer } = require('electron');
-const path = require('path');
-const fs = require('fs');;
+// Remove direct path and fs requires as they're not needed in the preload
 
 // Expose protected methods that allow the renderer process to use
 // the ipcRenderer without exposing the entire object
@@ -45,12 +44,21 @@ contextBridge.exposeInMainWorld('electronAPI', {
     }
   },
   
+  // Ping method for testing IPC connection
+  ping: async () => {
+    try {
+      return await ipcRenderer.invoke('ping');
+    } catch (error) {
+      console.error('Error in ping:', error);
+      return 'error';
+    }
+  },
+  
   // App info functions
-  getAppVersion: () => ipcRenderer.invoke('get-app-version'),
+  getAppVersion: () => process.env.npm_package_version,
   
   // System functions
   openExternal: (url) => ipcRenderer.send('open-external-url', url),
-  getAppVersion: () => process.env.npm_package_version,
 });
 
 console.log('Preload script has been loaded');
