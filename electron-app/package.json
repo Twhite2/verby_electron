@@ -1,0 +1,48 @@
+{
+  "name": "verbyflow",
+  "version": "1.0.0",
+  "description": "Real-time bilingual call translation app",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "electron:dev": "cross-env NODE_ENV=development vite build --watch & electron .",
+    "electron:build": "vite build && electron-builder",
+    "electron:start": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "react",
+    "translation",
+    "vite"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^5.18.0",
+    "@mui/material": "^5.18.0",
+    "@types/node": "^24.1.0",
+    "axios": "^1.11.0",
+    "date-fns": "^4.1.0",
+    "events": "^3.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "@types/uuid": "^9.0.1",
+    "@vitejs/plugin-react": "^4.7.0",
+    "cross-env": "^7.0.3",
+    "electron": "^37.2.4",
+    "electron-builder": "^24.13.3",
+    "electron-squirrel-startup": "^1.0.1",
+    "typescript": "^5.8.3",
+    "vite": "^4.5.14"
+  }
+}

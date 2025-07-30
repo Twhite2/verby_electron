@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node.js / Electron
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnp/
+.pnp.js
+coverage/
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.cache/
+
+# Vite
+dist-ssr
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Whisper model files
+*.pt
+*.bin
+*.safetensors
+
+# Log files
+*.log
+
+# Credentials
+*.pem
+*.env
+*.key
+credentials.json
