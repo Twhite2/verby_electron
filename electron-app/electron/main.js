@@ -48,8 +48,8 @@ const createWindow = () => {
     // In development, load from the local server
     mainWindow.loadURL('http://localhost:5173/');
     
-    // Open DevTools in development mode
-    mainWindow.webContents.openDevTools({ mode: 'detach' });
+    // DevTools can be opened manually with Ctrl+Shift+I or from the menu
+    // mainWindow.webContents.openDevTools({ mode: 'detach' });
   }
   
   // Multi-instance support for development
