@@ -120,7 +120,7 @@ verby_electron/
 - Dynamic language translation between multiple languages
 - Text-to-speech playback of translations
 - Session-based call management
-- Audio visualization and controls
+- Audio visualization & controls
 - Transcript history and export capabilities
 
 ## Troubleshooting
